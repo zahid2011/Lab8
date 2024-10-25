@@ -35,7 +35,7 @@ public class CustomListTest {
         City city = new City("Estevan", "SK");
         assertEquals(false, list.hasCity(city));  // the city shouldn't be in the list yet
 
-        list.addCity(city);  // Add the city
+        list.addCity(city);  // adding the city
         assertEquals(true, list.hasCity(city));
     }
 
