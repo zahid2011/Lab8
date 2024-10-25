@@ -31,10 +31,12 @@ public class CustomListTest {
 
     @Test
     public void hasCityTest() {
-        list = MockCityList();  // creating a mock list
+        list = MockCityList();
         City city = new City("Estevan", "SK");
+        assertEquals(false, list.hasCity(city));  // the city shouldn't be in the list yet
 
-        assertEquals(false, list.hasCity(city));
+        list.addCity(city);  // Add the city
+        assertEquals(true, list.hasCity(city));
     }
 
 
